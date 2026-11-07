@@ -12,7 +12,10 @@ Official site for synx build at synxbuild.com. Its only goal is to bring in new 
 - Commits use `synxbuild@gmail.com`. Node 22 (`.nvmrc`), pnpm.
 
 ## Status (2026-11-07)
-- Scaffold done and builds. The home is a placeholder with the logo only.
+- Base of the home built (10 sections + header, side index, footer) and builds static. Copy lives in `content/site.ts` (`*pixel*`, `~gradient~` markup).
+- Motion: GSAP + ScrollTrigger + SplitText, Lenis. One engine in `components/motion/motion-provider.tsx` driven by `data-split`, `data-fade`, `data-count`, `data-parallax`, `data-spotlight`. Sections set `data-theme` (dark / light / electric) and tokens switch with it.
+- Fonts: `geist` package (Sans, Mono, Pixel Square, Pixel Grid). Pixel = accents, one per screen.
+- Placeholders pending: client photos, testimonials, project screenshots, CTA destination (`CONTACT_HREF`), projects page (`PROJECTS_HREF`).
 - First commit is local only: the push failed with 403 because the GitHub account on this machine (`Lavreano`) is not a collaborator on `synxbuild/web` yet.
 - Waiting on the user: the copy and the final call to action. Don't invent copy.
 - Next: push, create the Vercel project, preview, then point synxbuild.com and www to it.
